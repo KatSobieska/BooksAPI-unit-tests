@@ -19,4 +19,9 @@ describe("FormatFullname", () => {
     expect(formatFullname("JOHN doE")).to.equal("John Doe");
     expect(formatFullname("JOHN DOE")).to.equal("John Doe");
   });
+
+  it("Should return error when fullname length is different than 2", () => {
+    expect(formatFullname("John Doe Test")).to.equal("Error");
+    expect(formatFullname("John")).to.equal("Error");
+  });
 });

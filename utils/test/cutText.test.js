@@ -28,4 +28,19 @@ describe("CutText", () => {
     expect(cutText("Lorem Ipsum", 0)).to.equal("Error");
     expect(cutText("Lorem Ipsum", -6)).to.equal("Error");
   });
+
+  it('Should return "content" without changes if proper args', () => {
+    expect(cutText("Lorem Ipsum", 40)).to.equal("Lorem Ipsum");
+    expect(cutText("Lorem Ipsum", 11)).to.equal("Lorem Ipsum");
+  });
+
+  it('Should return good cut "content" if proper args', () => {
+    expect(cutText("Lorem Ipsum dolor sit amet", 14)).to.equal(
+      "Lorem Ipsum..."
+    );
+    expect(cutText("Lorem Ipsum dolor sit amet", 5)).to.equal("Lorem...");
+    expect(cutText("Lorem Ipsum dolor sit amet", 17)).to.equal(
+      "Lorem Ipsum dolor..."
+    );
+  });
 });

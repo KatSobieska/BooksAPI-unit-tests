@@ -13,4 +13,10 @@ describe("FormatFullname", () => {
     expect(formatFullname([])).to.equal("Error");
     expect(formatFullname(function () {})).to.equal("Error");
   });
+
+  it("Should return correctly formatted formatFullname if proper arg", () => {
+    expect(formatFullname("amanda doe")).to.equal("Amanda Doe");
+    expect(formatFullname("JOHN doE")).to.equal("John Doe");
+    expect(formatFullname("JOHN DOE")).to.equal("John Doe");
+  });
 });

@@ -17,10 +17,10 @@ describe("CutText", () => {
   });
 
   it('Should return an error if "maxLength" arg is not a number', () => {
-    expect(cutText("Lorem Impsum", undefined)).to.equal("Error");
-    expect(cutText("Lorem Impsum", "abc")).to.equal("Error");
-    expect(cutText("Lorem Impsum", {})).to.equal("Error");
-    expect(cutText("Lorem Impsum", [])).to.equal("Error");
-    expect(cutText("Lorem Impsum", function () {})).to.equal("Error");
+    expect(cutText("Lorem Ipsum", undefined)).to.equal("Error");
+    expect(cutText("Lorem Ipsum", "abc")).to.equal("Error");
+    expect(cutText("Lorem Ipsum", {})).to.equal("Error");
+    expect(cutText("Lorem Ipsum", [])).to.equal("Error");
+    expect(cutText("Lorem Ipsum", function () {})).to.equal("Error");
   });
 });
